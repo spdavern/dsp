@@ -17,7 +17,7 @@ thinkplot.Config(xlabel='Number of kids in Family as Reported by Mom',
                  ylabel='Count')
 ```
 
-![](/Users/sean/CloudStation/Metis/dsp/lessons/statistics/images/Histogram of Number of Kids.png)
+![Histogram of Number of Kids](./images/Histogram of Number of Kids.png)
 
 Now compute the biased distribution we would see if we surveyed the children and asked them how many children under 18 (including themselves) are in their household. 
 
@@ -39,7 +39,9 @@ thinkplot.Pmfs([num_kids_pmf, num_kids_biased_pmf])
 thinkplot.Config(xlabel='Number Kids in Family', ylabel='PMF')
 ```
 
-![](/Users/sean/CloudStation/Metis/dsp/lessons/statistics/images/PMF Comparison.png)
+![PMF Comparison](./images/PMF Comparison.png)
+
+
 
 ```python
 print('Mean # of kids as reported by Mom: {0:1.2f}'.format(num_kids_pmf.Mean()))
