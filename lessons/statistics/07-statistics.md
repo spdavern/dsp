@@ -86,7 +86,35 @@ Bayes' Theorem is an important tool in understanding what we really know, given 
 
 Elvis Presley had a twin brother who died at birth.  What is the probability that Elvis was an identical twin? Assume we observe the following probabilities in the population: fraternal twin is 1/125 and identical twin is 1/300.  
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+Following reasoning by [Helfrich](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.385.9195&rep=rep1&type=pdf) and given that Elvis' twin was a male:
+
+![Title](./images/DecisionTree.png)
+
+From the diagram we can infer P(Identical|Male) = 5/(5+6) = 5/11
+
+#### Solution by Bayes' Theorem
+
+$P(Identical|Male) = \frac{P(Male|Identical) \cdot P(Identical)}{P(Male)}$
+
+To calculate P(Male):
+
+$$\begin{align}
+P(Male) &= P(Male|Identical) \cdot P(Identical) + P(Male|Fraternal) \cdot P(Fraternal) \\
+&= \frac{1}{2} \cdot \frac{1}{300} + \frac{1}{4} \cdot \frac{1}{125} \\
+&= \frac{1}{600} + \frac{1}{500} \\
+&= \frac{5}{3000} + \frac{6}{3000} \\
+&= \frac{11}{3000}
+\end{align}$$
+
+Then
+
+$$\begin{align}
+P(Identical|Male) &= \frac{ \frac{1}{2} \cdot \frac{1}{300} }{ \frac{11}{3000} } \\
+&= \frac{1}{600} \cdot \frac{3000}{11} \\
+&= \frac{5}{11} \\ &= 0.455
+\end{align}$$
+
+The above material is also captured in [Q5.ipynb](https://github.com/spdavern/dsp/blob/master/lessons/statistics/code/Q5.ipynb).
 
 ---
 
